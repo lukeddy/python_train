@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>Flask页面模板</title>
+	<style type="text/css">
+     *{
+     	padding:0;
+     	margin:0;
+     }
+     ul{
+     	list-style:none;
+     }
+     li{
+     	float:left;
+     	display:inline-block;
+     	margin-right:20px;
+     }
+     .clear{
+     	clear:both;
+     	width:0;
+     	hegiht:0;
+     }
+	</style>
+</head>
+<body>
+  <h1>我是首页,我叫{{username}}</h1>
+  {{nav_list[0]}}
+  <div>
+	   <ul>
+	  {% for nav in nav_list%}
+	  	<li>{{nav}}</li>
+	  {% endfor%}
+	  </ul>
+  </div>
+  <p class="clear"></p>
+  <br/>
+  <h3>{{blog['title']}}</h3>
+  <div>{{blog['content']}}</div>
+  <br/>
+  {%for item in blog%}
+    <p>{{item}}</p>
+  {%endfor%}
+  <div>
+  	{%for key,value in blog.items()%}
+      <p>{{key}},{{value}}</p>
+  	{%endfor%}
+  </div>
+  	
+</body>
+</html>
