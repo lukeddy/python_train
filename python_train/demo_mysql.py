@@ -96,3 +96,18 @@ for (username, password, created_date) in cursor:
 
 cursor.close()
 cnx.close()
+
+
+# ================Delete data from DB=================
+cnx = mysql.connector.connect(user='root', database=DB_NAME)
+cursor = cnx.cursor()   
+
+delSQL = "delete from tusers where username = %s"     
+param =("wangwu")      
+n = cursor.execute(delSQL,(param,)) 
+
+cnx.commit()
+print("successfully delete data:",n)    
+
+cursor.close()  
+cnx.close() 
