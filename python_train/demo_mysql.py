@@ -1,4 +1,5 @@
 #encoding:utf8
+#install mysql connector for python http://dev.mysql.com/downloads/connector/python/
 from datetime import date, datetime, timedelta
 import mysql.connector
 
