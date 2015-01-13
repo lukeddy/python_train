@@ -1,0 +1,15 @@
+body{
+	background:#dddddd;
+	font-size:20px;
+	background:url(../images/background.jpg) no-repeat;
+	background-size: cover;
+}
+.main{
+	background: #fff;
+}
+.wrapper{
+	width:1024px;
+	margin:auto;
+	border:1px solid #999999;
+	background:#ffffff;
+}

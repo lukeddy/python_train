@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>{{ title }}</title>
+   </head>
+   <body>
+      <h3>List items</h3>
+     <ul>
+       {% for item in items %}
+         <li>{{ escape(item) }}</li>
+       {% end %}
+     </ul>
+     <h3>Dict items</h3>
+     {% for key,value in mapitems.items()%}
+        <li>{{key}},{{value}}</li>
+     {%end%}
+   </body>
+ </html>
