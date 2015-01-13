@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>xsrf_cookies测试</h1>
+<form action="/login" method="post">
+UserName: <input type="text" name="username">
+{{ xsrf_form_html() }}
+<input type="submit" value="Sign in">
+</form>
+</body>
+</html>
